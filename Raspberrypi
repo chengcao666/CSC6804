@@ -1,0 +1,22 @@
+import nodeimu from 'nodeimu'
+
+const imu = new nodeimu.IMU()
+
+function displayResult(err, data) {
+    if (err) {
+        console.error(err)
+        return
+    }
+    console.log('---')
+    console.log('Time: ' + data.timestamp.toISOString())
+    console.log('Temperature: ' + data.temperature.toFixed(2) + ' °C')
+    console.log('Pressure: ' + data.pressure.toFixed(2) + ' mbar')
+    console.log('Humidity: ' + data.humidity.toFixed(2) + '%')
+}
+
+function beginMeasurement() {
+    imu.getValue(displayResult)
+}
+
+// Once a second
+setInterval(beginMeasurement, 1000)
