@@ -1,0 +1,25 @@
+from microbit import *
+
+while True:
+    if display.read_light_level() > 100:
+        display.show(Image(
+        "90909:"
+        "09990:"
+        "99999:"
+        "09990:"
+        "90909"))
+    else:
+        display.clear()
+        
+        input.onLogoEvent(TouchButtonEvent.Pressed, function () {
+    basic.showIcon(IconNames.Surprised)
+    soundExpression.spring.playUntilDone()
+})
+input.onButtonPressed(Button.A, function () {
+    basic.showIcon(IconNames.Happy)
+    soundExpression.happy.playUntilDone()
+})
+input.onButtonPressed(Button.B, function () {
+    basic.showIcon(IconNames.Sad)
+    soundExpression.sad.playUntilDone()
+})
