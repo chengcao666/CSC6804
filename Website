@@ -1,0 +1,24 @@
+<h1>Smart bins</h1>
+<style>
+  body { 
+    background-color: green;
+  }
+  </style>
+<div>
+
+</div>
+<p>Welcome to the community</p>
+<p>Let's go to the ranking list <a href="rankinglist.html">Rankinglist</a>.</p>
+<p>Let's link to the  local farm <a href="https://www.ouseburnfarm.org.uk/">Local farm</a>.</p>
+<h2>Dry food</h2>
+<ul>
+  <li>animalfood</li>
+  <li>Bird food</li>
+  <li>Your points</li>
+</ul>
+<h2>Wet food</h2>
+<ol>
+  <li>fertilizer</li>
+  <li>smart planting</li>
+  <li>Your points</li>
+</ol>
